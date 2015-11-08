@@ -11,6 +11,11 @@
     },
     "sdkVersion": "3",
     "shortName": "HumanCompass",
+    "targetPlatforms": [
+        "aplite",
+        "basalt",
+        "chalk"
+    ],
     "uuid": "2d0d78a2-6af6-4890-a1b4-0f568611383f",
     "versionLabel": "1.0",
     "watchapp": {
