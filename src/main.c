@@ -58,6 +58,7 @@ static void received_handler(DictionaryIterator *iter, void *context) {
     if(result_tuple) {
         
          bearing = result_tuple->value->uint16;
+        snprintf(s_buffer, sizeof(s_buffer)," %d°",  bearing);
         
     }
     text_layer_set_text(s_price_layer,s_buffer);
@@ -81,7 +82,7 @@ static void main_window_load(Window *window) {
   layer_add_child(window_layer, text_layer_get_layer(s_output_layer));
     
   s_price_layer = text_layer_create(GRect(0, 75, window_bounds.size.w, 50));
-  text_layer_set_text(s_price_layer, "$0000.00");
+  text_layer_set_text(s_price_layer, "0.00");
   text_layer_set_text_alignment(s_price_layer, GTextAlignmentCenter);
   text_layer_set_font(s_price_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28));
   layer_add_child(window_layer, text_layer_get_layer(s_price_layer));
